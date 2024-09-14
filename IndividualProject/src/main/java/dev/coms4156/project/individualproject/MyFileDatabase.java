@@ -80,6 +80,7 @@ public class MyFileDatabase {
   @Override
   public String toString() {
     StringBuilder result = new StringBuilder();
+    this.departmentMapping = deSerializeObjectFromFile();
     for (Map.Entry<String, Department> entry : departmentMapping.entrySet()) {
       String key = entry.getKey();
       Department value = entry.getValue();

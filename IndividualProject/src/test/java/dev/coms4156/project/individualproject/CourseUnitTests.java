@@ -18,14 +18,12 @@ public class CourseUnitTests {
 
   @Test
   public void toStringTest() {
-    System.out.println("1");
     String expectedResult = "\nInstructor: Griffin Newbold; Location: 417 IAB; Time: 11:40-12:55";
     assertEquals(expectedResult, testCourse.toString());
   }
 
   @Test
   public void isCourseFullTest() {
-    System.out.println("2");
     assert(!testCourse.isCourseFull());
 
     testCourse.setEnrolledStudentCount(125);
@@ -35,7 +33,6 @@ public class CourseUnitTests {
 
   @Test
   public void enrollStudentTest() {
-    System.out.println("3");
     assert(!testCourse.enrollStudent());
 
     testCourse.setEnrolledStudentCount(125);
@@ -44,7 +41,6 @@ public class CourseUnitTests {
 
   @Test
   public void dropStudentTest() {
-    System.out.println("4");
     assert(testCourse.dropStudent());
 
     testCourse.setEnrolledStudentCount(0);
@@ -53,7 +49,6 @@ public class CourseUnitTests {
 
   @Test
   public void getCourseLocationTest() {
-    System.out.println("5");
     String expected = "417 IAB";
     assertEquals(expected, testCourse.getCourseLocation());
 
@@ -64,7 +59,6 @@ public class CourseUnitTests {
 
   @Test
   public void getInstructorNameTest() {
-    System.out.println("6");
     String expected = "Griffin Newbold";
     assertEquals(expected, testCourse.getInstructorName());
 
@@ -75,7 +69,6 @@ public class CourseUnitTests {
 
   @Test
   public void getCourseTimeSlotTest() {
-    System.out.println("7");
     String expected = "11:40-12:55";
     assertEquals(expected, testCourse.getCourseTimeSlot());
 
